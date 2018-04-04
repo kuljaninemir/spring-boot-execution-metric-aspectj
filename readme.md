@@ -83,7 +83,8 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 ## Authors
 
-* **Emir Kuljanin** - *Initial work* - [lukashinsch](https://github.com/lukashinsch)
+* **Lukas Hinsch** - *Initial work* - [lukashinsch](https://github.com/lukashinsch)
+* **Emir Kuljanin** - *Modificiations* - [kuljaninemir](https://github.com/kuljaninemir)
 
 See also the list of [contributors](https://github.com/kuljaninemir/spring-boot-execution-metric-aspectj/contributors) who participated in this project.
 
