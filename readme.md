@@ -37,6 +37,7 @@ Configure aspectj-maven-plugin and set it to weave this jar:
     <Xlint>ignore</Xlint>
     <encoding>UTF-8</encoding>
     <XnoInline>true</XnoInline>
+    <proc>none</proc>
     <weaveDependencies>
       <weaveDependency>
         <groupId>com.github.kuljaninemir</groupId>
