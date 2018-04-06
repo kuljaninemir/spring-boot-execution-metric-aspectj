@@ -19,7 +19,7 @@ import static org.mockito.Mockito.verify;
  * Created by lh on 25/04/15.
  */
 public abstract class AbstractMetricTest {
-    protected  static final long MAX_OVERHEAD = 10L;
+    protected  static final long MAX_OVERHEAD = 20L;
 
     @Mock
     private GaugeService gaugeService;
