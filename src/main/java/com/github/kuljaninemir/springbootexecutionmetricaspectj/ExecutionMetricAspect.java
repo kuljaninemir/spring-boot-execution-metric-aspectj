@@ -21,7 +21,7 @@ public class ExecutionMetricAspect {
     private Map<String, ThrowingSupplierMetric<Object>> store = new ConcurrentHashMap<>();
     public static ExecutionMetricFactory factory;
 
-    @Around("@annotation(com.github.kuljaninemir.springbootexecutionmetricaspectj.ExecutionMetric)")
+    @Around("execution(* *(..)) && @annotation(com.github.kuljaninemir.springbootexecutionmetricaspectj.ExecutionMetric)")
     public Object measure(ProceedingJoinPoint joinPoint) throws Throwable {
         ExecutionMetric executionMetric = getExecutionMetric(joinPoint);
         Logger targetLogger = LoggerFactory.getLogger(getClassForLogger(joinPoint));
