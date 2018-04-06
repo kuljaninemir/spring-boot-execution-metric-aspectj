@@ -12,7 +12,7 @@ Add the following dependencies:
 <dependency>
   <groupId>com.github.kuljaninemir</groupId>
   <artifactId>spring-boot-execution-metric-aspectj</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.3</version>
 </dependency>
 <dependency>
   <groupId>org.aspectj</groupId>
