@@ -1,8 +1,12 @@
-[![Build Status](https://travis-ci.org/kuljaninemir/spring-boot-execution-metric-aspectj.svg?branch=master)](https://travis-ci.org/kuljaninemir/spring-boot-execution-metric-aspectj) [![Coverage Status](https://codecov.io/gh/kuljaninemir/spring-boot-execution-metric-aspectj/branch/master/graph/badge.svg)](https://codecov.io/gh/kuljaninemir/spring-boot-execution-metric-aspectj) [![HitCount](http://hits.dwyl.com/kuljaninemir/spring-boot-execution-metric-aspectj.svg)](http://hits.dwyl.com/kuljaninemir/spring-boot-execution-metric-aspectj) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+[![Build Status](https://travis-ci.org/kuljaninemir/spring-boot-execution-metric-aspectj.svg?branch=master)](https://travis-ci.org/kuljaninemir/spring-boot-execution-metric-aspectj) [![HitCount](http://hits.dwyl.com/kuljaninemir/spring-boot-execution-metric-aspectj.svg)](http://hits.dwyl.com/kuljaninemir/spring-boot-execution-metric-aspectj) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 # Spring boot execution metric aspectj
 
-This repository is based on [spring-boot-execution-metric](https://github.com/lukashinsch/spring-boot-execution-metric) by lukashinschs. Gradle is swapped for Maven. Minor modifications are made to be able to use this with AspectJ instead of Spring AOP.
+This dependency lets you:
+- Use Spring Boot 2.x metrics with AspectJ.
+- Use one annotation to measure counter, gauge and timed data.
+- Minimal config to export data to Graphite.
+- Configure environment and app-name on the data.
 
 ## Usage
 
@@ -12,7 +16,7 @@ Add the following dependencies:
 <dependency>
   <groupId>com.github.kuljaninemir</groupId>
   <artifactId>spring-boot-execution-metric-aspectj</artifactId>
-  <version>0.0.3</version>
+  <version>1.0.2</version>
 </dependency>
 <dependency>
   <groupId>org.aspectj</groupId>
