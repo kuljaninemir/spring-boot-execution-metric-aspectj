@@ -1,10 +1,11 @@
 [![Build Status](https://travis-ci.org/kuljaninemir/spring-boot-execution-metric-aspectj.svg?branch=master)](https://travis-ci.org/kuljaninemir/spring-boot-execution-metric-aspectj) [![HitCount](http://hits.dwyl.com/kuljaninemir/spring-boot-execution-metric-aspectj.svg)](http://hits.dwyl.com/kuljaninemir/spring-boot-execution-metric-aspectj) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
-# Spring boot execution metric aspectj
+# Spring boot execution metric aspectj for graphite
 
 This dependency lets you:
 - Use Spring Boot 2.x metrics with AspectJ.
 - Use one annotation to measure counter, gauge and timed data.
+- Annotate any objects, not just spring components.
 - Minimal config to export data to Graphite.
 - Configure environment and app-name on the data.
 
@@ -16,7 +17,7 @@ Add the following dependencies:
 <dependency>
   <groupId>com.github.kuljaninemir</groupId>
   <artifactId>spring-boot-execution-metric-aspectj</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.11</version>
 </dependency>
 <dependency>
   <groupId>org.aspectj</groupId>
@@ -62,15 +63,6 @@ Configure aspectj-maven-plugin and set it to weave this jar:
 </plugin>
 ```
 
-Make sure you have a Configuration that scans this package:
-
-```
-@Configuration
-@ComponentScan("com.github.kuljaninemir.springbootexecutionmetricaspectj")
-public class MyConfig {
-}
-```
-
 Compile with maven
 
 ```
@@ -88,8 +80,7 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 ## Authors
 
-* **Lukas Hinsch** - *Initial work* - [lukashinsch](https://github.com/lukashinsch)
-* **Emir Kuljanin** - *Modificiations* - [kuljaninemir](https://github.com/kuljaninemir)
+* **Emir Kuljanin** - [kuljaninemir](https://github.com/kuljaninemir)
 
 See also the list of [contributors](https://github.com/kuljaninemir/spring-boot-execution-metric-aspectj/contributors) who participated in this project.
 
