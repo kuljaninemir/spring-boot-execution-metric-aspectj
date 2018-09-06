@@ -17,7 +17,7 @@ Add the following dependencies:
 <dependency>
   <groupId>com.github.kuljaninemir</groupId>
   <artifactId>spring-boot-execution-metric-aspectj</artifactId>
-  <version>1.0.11</version>
+  <version>1.0.12</version>
 </dependency>
 <dependency>
   <groupId>org.aspectj</groupId>
@@ -61,6 +61,20 @@ Configure aspectj-maven-plugin and set it to weave this jar:
     </execution>
   </executions>
 </plugin>
+```
+
+Configure the properties as you like, for example:
+
+```
+management.metrics.export.graphite.host=localhost
+management.metrics.export.graphite.port=8097
+management.metrics.export.graphite.step=10s
+management.metrics.export.graphite.tags-as-prefix=graphite-prefix-env,graphite-prefix-app
+management.metrics.export.graphite.prefix-tag-env=dev
+management.metrics.export.graphite.prefix-tag-app=myapp1
+management.metrics.export.graphite.enabled=true
+management.metrics.export.graphite.protocol=plaintext
+management.metrics.web.server.auto-time-requests=true
 ```
 
 Make sure you have a Configuration that scans this package:

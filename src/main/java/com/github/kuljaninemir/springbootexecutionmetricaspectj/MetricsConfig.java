@@ -14,16 +14,16 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 public class MetricsConfig {
-    @Value("${management.metrics.export.graphite.host}")
+    @Value("${management.metrics.export.graphite.host:localhost}")
     private String hostName;
 
-    @Value("${management.metrics.export.graphite.tags-as-prefix}")
+    @Value("${management.metrics.export.graphite.tags-as-prefix:graphite-prefix-env,graphite-prefix-app}")
     private String[] tagAsPrefix;
 
-    @Value("${management.metrics.export.graphite.prefix-tag-env}")
+    @Value("${management.metrics.export.graphite.prefix-tag-env:dev}")
     private String prefixTagEnv;
 
-    @Value("${management.metrics.export.graphite.prefix-tag-app}")
+    @Value("${management.metrics.export.graphite.prefix-tag-app:myapp}")
     private String prefixTagApp;
 
     @Bean(name="graphiteBean")
