@@ -21,7 +21,7 @@ public class ExecutionMetricAspect {
     public Object measure(ProceedingJoinPoint joinPoint) throws Throwable {
         ExecutionMetric executionMetric = getExecutionMetric(joinPoint);
         String metricName = executionMetric.value();
-        logger.info("Trying to capture metrics for metricName.");
+        logger.trace("Trying to capture metrics for "+metricName);
 
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
@@ -33,7 +33,7 @@ public class ExecutionMetricAspect {
         Metrics.gauge("gauge."+metricName, duration);
         Metrics.timer("timer."+metricName).record(duration, TimeUnit.MILLISECONDS);
 
-        logger.info("Time elapsed: "+duration + " ms");
+        logger.trace("Time elapsed for "+metricName+": "+duration + " ms");
 
         return proceed;
     }
