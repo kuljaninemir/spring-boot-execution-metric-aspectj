@@ -29,9 +29,9 @@ public class ExecutionMetricAspect {
         stopWatch.stop();
         long duration = stopWatch.getLastTaskTimeMillis();
 
-        Metrics.counter("counter."+metricName).increment();
-        Metrics.gauge("gauge."+metricName, duration);
-        Metrics.timer("timer."+metricName).record(duration, TimeUnit.MILLISECONDS);
+        Metrics.counter(metricName+".counter").increment();
+        Metrics.gauge(metricName+".gauge", duration);
+        Metrics.timer(metricName+".timer").record(duration, TimeUnit.MILLISECONDS);
 
         logger.trace("Time elapsed for "+metricName+": "+duration + " ms");
 
