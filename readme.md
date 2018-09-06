@@ -63,6 +63,17 @@ Configure aspectj-maven-plugin and set it to weave this jar:
 </plugin>
 ```
 
+Make sure you have a Configuration that scans this package:
+
+```
+@Configuration
+@ComponentScan("com.github.kuljaninemir.springbootexecutionmetricaspectj")
+public class MyConfig {
+}
+```
+
+
+
 Compile with maven
 
 ```
